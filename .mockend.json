@@ -8,6 +8,6 @@
     },
     "Items": {
         "body": "string",
-        "post": "Items[]"
+        "post": "date"
     }
 }
