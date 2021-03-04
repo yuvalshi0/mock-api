@@ -1,7 +1,7 @@
 {
     "Tree": {
         "title": "string",
-        "views": "int",
+        "test": "int",
         "published": "boolean",
         "createdAt": "date",
         "items": "Items[]"
