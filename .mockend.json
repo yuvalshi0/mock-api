@@ -1,13 +1,13 @@
 {
-    "Post": {
+    "Tree": {
         "title": "string",
         "views": "int",
         "published": "boolean",
         "createdAt": "date",
-        "comments": "Comment[]"
+        "items": "Items[]"
     },
-    "Comment": {
+    "Items": {
         "body": "string",
-        "post": "Post"
+        "post": "Items[]"
     }
 }
