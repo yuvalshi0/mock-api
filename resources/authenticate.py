@@ -15,5 +15,5 @@ def authenticate(func):
         if acct:
             return func(*args, **kwargs)
 
-        flask_restful.abort(401, message='Please provide a key')
+        flask_restful.abort(401, message='unauthorized, please provide a valid key')
     return wrapper

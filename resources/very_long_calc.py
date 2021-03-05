@@ -1,11 +1,11 @@
 import flask_restful
-from resources.atomic_list import AtomicCounterList
-from flask_restful import Resource, reqparse
-from .authenticate import authenticate
 from time import sleep
 from random import randrange
 import threading
-import randfacts
+from resources.atomic_list import AtomicCounterList
+from flask_restful import Resource, reqparse
+from .authenticate import authenticate
+from .randfact import get_fact
 
 count = AtomicCounterList()
 
@@ -50,5 +50,5 @@ class LongCalculatorStatus(Resource):
         if int(id) in count.finished_list:
             return {'status': 2, 'message': 'Calculation finished!'}
         if int(id) in count.list:
-            return {'status': 1, 'message': 'Calculation is still running, in the meantime enjoy a funfact', 'fact': f"{randfacts.getFact()}"}
+            return {'status': 1, 'message': 'Calculation is still running, in the meantime enjoy a funfact', 'fact': f"{get_fact()}"}
         return {'status': 3, 'mesaage': 'Calculation not found!'}

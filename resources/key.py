@@ -16,5 +16,5 @@ class KeyResource(Resource):
 
     def post(self):
         global key
-        key = randomword(15)
+        key = randomword(30)
         return {'key': key}
