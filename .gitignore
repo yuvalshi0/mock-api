@@ -1,0 +1,4 @@
+flask-venv
+tests
+*.pyc
+__pycache__/*
