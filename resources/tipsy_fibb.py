@@ -8,14 +8,14 @@ SIZE_ERROR_MESSAGE = 'Array size it too big!'
 
 def fib(n, number_one, number_two):
     a, b = number_one, number_two
-    mistake = random.choice([1, -1])
+    mistake = random.choice([1, 0, -1])
     for _ in range(n):
         yield a + mistake
         a, b = b, a + b
 
 
 class TipsyFibbonachi(Resource):
-    method_decorators = [authenticate]
+    #method_decorators = [authenticate]
 
     def post(self):
         parser = reqparse.RequestParser()
