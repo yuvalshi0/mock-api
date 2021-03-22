@@ -21,7 +21,8 @@ The assignment folder contains 3 files:
 * test.js
 * Assignment Document
 To start the assignment, run the ‘exercise_v1.exe’ file.
-If started correctly, you should be able to to see this output (keep it running thourghout your whole work session):
+If started correctly, you should be able to to see this output (keep it running thourghout your whole work session):  
+![Start](docs/Overview.png)
 
 ### INTRODUCTION
 Your job is to write automated tests using simple http requests to evalutate the API correctness.
@@ -45,9 +46,9 @@ _P.S. we didn’t add all the modules implementation, but I think you will be ab
 In earnix we sometime have to test some really complex data structres, in this part we will test our person connection tree generator.
 The tree generator will generate a connection tree according to the given depth you specify in the  request query-params. For example: making a GET request to the /tree?depth=3 will predouce a tree of connection of depth 3.
 
-Example of a 2 depth tree:
- 
-As you may see, every person has only one connection, the tree ends where there are not more connections.
+Example of a 2 depth tree:  
+ ![Tree](docs/TreeExample.png)  
+_As you may see, every person has only one connection, the tree ends where there are not more connections._
 
 Another feature of this person connection tree generator, is to limit the connections max age, this can be done by providing an age query param. For example: making a GET request to the route /tree?&depth=6&age=20 will predouce a connection tree with a depth of 6 where all the persons in the tree maximum 20 year old (via the ‘age’ JSON property)
 * **TASK 1:** Write an automated test to make sure you cannot produce a tree larger than 50 and lower than 1
@@ -59,9 +60,9 @@ At earnix we run some really complex calculations, in this simple API we develop
 We have not tested it yet, but we will accpect this generator if it only mistaken by 1. For example if the Nth Fibonacci number should be X, we will accpect it if its also X-1, X or X+1  
 To generate a series, provide a json with ‘number_one’, ‘number_two’ and ‘size’ to the /tipsy, make POST request. For example:  
 A request with the body as:  
- 
+![FiibReq](docs/FibbRequest.png)  
 Will return:  
- 
+![FiibRes](docs/FibbResponse.png) 
 * **TASK 1:** Write an autometed test to check that the fibbonaci series size is as requested
 * **TASK 2:** Write an autometed test to check that each number in the fibbonaci series generated is correct, meaning each Nth number in the series mistaken at most by 1.
 
