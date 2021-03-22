@@ -1,4 +1,6 @@
-from math import radians
+"""
+Task 3
+"""
 from flask_restful import Resource, reqparse
 import flask_restful
 import faker
@@ -18,7 +20,13 @@ def generate_leaf(max_age=50):
     phone_number = fake.phone_number()
     job = fake.job()
     age = max(randrange(max_age), 1)
-    return {'name': name, 'address': date, 'age': age, 'company': company, 'job': job, 'phone_number': phone_number}
+    return {'name': name, 
+            'address': date, 
+            'age': age, 
+            'company': company, 
+            'job': job, 
+            'phone_number': phone_number
+            }
 
 
 def generate_tree(depth, max_age=50):

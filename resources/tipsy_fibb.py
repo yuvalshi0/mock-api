@@ -1,3 +1,6 @@
+"""
+Task 4
+"""
 import random
 from flask_restful import Resource, reqparse
 import flask_restful
@@ -15,7 +18,7 @@ def fib(n, number_one, number_two):
 
 
 class TipsyFibbonachi(Resource):
-    #method_decorators = [authenticate]
+    method_decorators = [authenticate]
 
     def post(self):
         parser = reqparse.RequestParser()

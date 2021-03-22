@@ -1,3 +1,6 @@
+"""
+This Task was not given in the end to candidates
+"""
 import flask_restful
 from time import sleep
 from random import randrange

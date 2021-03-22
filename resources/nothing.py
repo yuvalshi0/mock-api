@@ -1,3 +1,6 @@
+"""
+Task 1
+"""
 from flask_restful import Resource
 from .authenticate import authenticate
 
