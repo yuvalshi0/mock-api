@@ -1,5 +1,6 @@
 # HOME ASSIGNMENT
-This exersice was compressed to an exe and sent to candidates. this was a job for junior QA Automation
+This exersice was compressed to an exe using [PyInstaller](https://www.pyinstaller.org/) and sent to candidates.  
+This was a position for Student QA Automation
 ### OVERVIEW
 This assignment is meant to test your thinking, learning and code writing skills.
 The assignment solutions will be reviewed during your scheduled interview.
