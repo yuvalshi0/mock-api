@@ -50,7 +50,8 @@ Example of a 2 depth tree:
  ![Tree](docs/TreeExample.png)  
 _As you may see, every person has only one connection, the tree ends where there are not more connections._
 
-Another feature of this person connection tree generator, is to limit the connections max age, this can be done by providing an age query param. For example: making a GET request to the route /tree?&depth=6&age=20 will predouce a connection tree with a depth of 6 where all the persons in the tree maximum 20 year old (via the ‘age’ JSON property)
+Another feature of this person connection tree generator, is to limit the connections max age, this can be done by providing an age query param.  
+For example: making a _GET_ request to the route _/tree?&depth=6&age=20_ will predouce a connection tree with a depth of 6 where all the persons in the tree maximum 20 year old (via the ‘age’ JSON property)
 * **TASK 1:** Write an automated test to make sure you cannot produce a tree larger than 50 and lower than 1
 * **TASK 2:** Write an autometed test to make sure the tree depth is as requested, use a recursive function and a non-recursive function.
 * **TASK 3:** Write an automated test to make sure that the age constraint works as expected.
